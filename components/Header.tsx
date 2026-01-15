@@ -5,11 +5,11 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const navigation = [
-  { name: "Home", href: "/" },
-  { name: "Services", href: "/services" },
-  { name: "Portfolio", href: "/portfolio" },
-  { name: "About", href: "/about" },
-  { name: "Contact", href: "/contact" },
+  { name: "Why Ethos", href: "/why-ethos" },
+  { name: "Solutions", href: "/solutions" },
+  { name: "Pricing", href: "/pricing" },
+  { name: "Compliance", href: "/compliance" },
+  { name: "Resources", href: "/resources" },
 ];
 
 export default function Header() {
@@ -56,13 +56,19 @@ export default function Header() {
           ))}
         </div>
 
-        {/* CTA Button */}
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        {/* CTA Buttons */}
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4">
+          <Link
+            href="/signin"
+            className="text-sm font-semibold leading-6 text-gray-900 hover:text-primary transition-colors"
+          >
+            Sign in
+          </Link>
           <Link
             href="/contact"
             className="rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-dark transition-colors"
           >
-            Get Started
+            Book a payment audit
           </Link>
         </div>
       </nav>
@@ -82,11 +88,18 @@ export default function Header() {
               </Link>
             ))}
             <Link
+              href="/signin"
+              className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Sign in
+            </Link>
+            <Link
               href="/contact"
               className="block rounded-md bg-primary px-3 py-2.5 text-center text-base font-semibold text-white shadow-sm hover:bg-primary-dark mt-4"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Get Started
+              Book a payment audit
             </Link>
           </div>
         </div>

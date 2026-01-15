@@ -3,22 +3,27 @@ import { Mail, Phone, MapPin, Linkedin, Twitter } from "lucide-react";
 
 const footerLinks = {
   company: [
-    { name: "About Us", href: "/about" },
-    { name: "Services", href: "/services" },
-    { name: "Portfolio", href: "/portfolio" },
+    { name: "Why Ethos", href: "/why-ethos" },
+    { name: "Solutions", href: "/solutions" },
+    { name: "Pricing", href: "/pricing" },
     { name: "Contact", href: "/contact" },
   ],
-  services: [
-    { name: "Payment Processing", href: "/services#payment-processing" },
-    { name: "Payment Gateway", href: "/services#payment-gateway" },
-    { name: "Fraud Prevention", href: "/services#fraud-prevention" },
-    { name: "Analytics", href: "/services#analytics" },
+  solutions: [
+    { name: "Enterprise E-commerce", href: "/solutions#enterprise" },
+    { name: "B2B & Wholesale", href: "/solutions#b2b" },
+    { name: "DTC Brands", href: "/solutions#dtc" },
+    { name: "Hospitality", href: "/solutions#hospitality" },
+  ],
+  resources: [
+    { name: "Resources & Guides", href: "/resources" },
+    { name: "Compliance & Risk", href: "/compliance" },
+    { name: "Request Audit", href: "/contact" },
+    { name: "Sign In", href: "/signin" },
   ],
   legal: [
     { name: "Privacy Policy", href: "/privacy" },
     { name: "Terms of Service", href: "/terms" },
     { name: "Security", href: "/security" },
-    { name: "Compliance", href: "/compliance" },
   ],
 };
 
@@ -37,8 +42,8 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-gray-400 text-sm leading-6">
-              Leading provider of innovative payment solutions for businesses.
-              Secure, scalable, and reliable.
+              Integrated enterprise software and payments built for U.S.
+              businesses with $10M+ in annual revenue.
             </p>
             <div className="flex space-x-4">
               <a
@@ -77,11 +82,11 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services Links */}
+          {/* Solutions Links */}
           <div>
-            <h3 className="text-sm font-semibold mb-4 text-white">Services</h3>
+            <h3 className="text-sm font-semibold mb-4 text-white">Solutions</h3>
             <ul className="space-y-3">
-              {footerLinks.services.map((link) => (
+              {footerLinks.solutions.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
@@ -94,32 +99,20 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Resources Links */}
           <div>
-            <h3 className="text-sm font-semibold mb-4 text-white">Contact</h3>
+            <h3 className="text-sm font-semibold mb-4 text-white">Resources</h3>
             <ul className="space-y-3">
-              <li className="flex items-start gap-2 text-sm text-gray-400">
-                <Mail className="h-5 w-5 flex-shrink-0 mt-0.5" />
-                <a
-                  href="mailto:info@ethossolutions.tech"
-                  className="hover:text-white transition-colors"
-                >
-                  info@ethossolutions.tech
-                </a>
-              </li>
-              <li className="flex items-start gap-2 text-sm text-gray-400">
-                <Phone className="h-5 w-5 flex-shrink-0 mt-0.5" />
-                <a
-                  href="tel:+1234567890"
-                  className="hover:text-white transition-colors"
-                >
-                  +1 (234) 567-890
-                </a>
-              </li>
-              <li className="flex items-start gap-2 text-sm text-gray-400">
-                <MapPin className="h-5 w-5 flex-shrink-0 mt-0.5" />
-                <span>123 Business Ave, Suite 100, City, ST 12345</span>
-              </li>
+              {footerLinks.resources.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-gray-400 hover:text-white transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

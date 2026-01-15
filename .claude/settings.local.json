@@ -10,7 +10,9 @@
       "Bash(nul)",
       "Bash(dir:*)",
       "Bash(git add:*)",
-      "Bash(del nul)"
+      "Bash(del nul)",
+      "Bash(powershell:*)",
+      "Bash(del extract-docx.ps1)"
     ],
     "deny": [],
     "ask": []
