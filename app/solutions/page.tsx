@@ -302,8 +302,67 @@ export default function Solutions() {
           </div>
         </section>
 
-        {/* Stats Section */}
+        {/* Partners Section */}
         <section className="py-24 bg-gray-50">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-4">
+                Our Partners
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Companies who use Adyen Processing, our payments partner
+              </p>
+            </div>
+
+            <div className="flex items-center justify-center gap-8 flex-wrap max-w-6xl mx-auto">
+              <div className="flex items-center justify-center h-16 px-8 grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100">
+                <img
+                  src="/images/adobe.svg"
+                  alt="Adobe"
+                  className="h-full w-auto object-contain"
+                />
+              </div>
+              <div className="flex items-center justify-center h-16 px-8 grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100">
+                <img
+                  src="/images/visa.svg"
+                  alt="Visa"
+                  className="h-full w-auto object-contain"
+                />
+              </div>
+              <div className="flex items-center justify-center h-16 px-8 grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100">
+                <img
+                  src="/images/spotify.svg"
+                  alt="Spotify"
+                  className="h-full w-auto object-contain"
+                />
+              </div>
+              <div className="flex items-center justify-center h-16 px-8 grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100">
+                <img
+                  src="/images/ebay.svg"
+                  alt="eBay"
+                  className="h-full w-auto object-contain"
+                />
+              </div>
+              <div className="flex items-center justify-center h-16 px-8 grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100">
+                <img
+                  src="/images/american-express.svg"
+                  alt="American Express"
+                  className="h-full w-auto object-contain"
+                />
+              </div>
+              <div className="flex items-center justify-center h-16 px-8 grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100">
+                <img
+                  src="/images/uber.svg"
+                  alt="Uber"
+                  className="h-full w-auto object-contain"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section className="py-24 bg-white">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               <div className="bg-primary rounded-xl p-8 text-center text-white">
