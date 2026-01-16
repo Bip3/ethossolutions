@@ -78,7 +78,7 @@ export default function AboutPage() {
                 Powering the Future of Payments
               </h1>
               <p className="text-lg leading-8 text-gray-100">
-                We're on a mission to make payment processing seamless, secure,
+                We're on a mission to make payment processing seamless,
                 and accessible for businesses of all sizes.
               </p>
             </div>
