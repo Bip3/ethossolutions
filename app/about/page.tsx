@@ -6,14 +6,14 @@ import { Target, Eye, Award, Users, Shield, Zap } from "lucide-react";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Ethos Solutions - our mission, values, and commitment to delivering world-class payment infrastructure for enterprises.",
+    "Learn about Ethos Solutions - our mission, values, and commitment to delivering world-class integrated software infrastructure for enterprises.",
 };
 
 const values = [
   {
     name: "Security First",
     description:
-      "We prioritize the security and privacy of every transaction, ensuring your data is always protected.",
+      "We prioritize the security and privacy, ensuring your data is always protected.",
     icon: Shield,
   },
   {
@@ -39,7 +39,7 @@ const values = [
 const milestones = [
   {
     year: "2015",
-    title: "Company Founded",
+    title: "Ayden  Founded",
     description: "Started with a vision to revolutionize payment processing",
   },
   {
@@ -75,10 +75,10 @@ export default function AboutPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl mb-6">
-                Powering the Future of Payments
+                Powering the Future of growth
               </h1>
               <p className="text-lg leading-8 text-gray-100">
-                We're on a mission to make payment processing seamless,
+                We're on a mission to make enterprise software solutions integrated, seamless,
                 and accessible for businesses of all sizes.
               </p>
             </div>
@@ -99,10 +99,10 @@ export default function AboutPage() {
                   </h2>
                 </div>
                 <p className="text-gray-600 text-lg leading-relaxed">
-                  To empower businesses with innovative payment solutions that
+                  To empower businesses with innovative software solutions that
                   drive growth, enhance customer experiences, and enable global
-                  commerce. We believe in making complex payment infrastructure
-                  simple and accessible.
+                  commerce. We believe in making complex supply chain and payment infrastructure
+                  simple and accessible for niche industries.
                 </p>
               </div>
               <div className="p-8 bg-gray-50 rounded-2xl">
@@ -115,7 +115,7 @@ export default function AboutPage() {
                   </h2>
                 </div>
                 <p className="text-gray-600 text-lg leading-relaxed">
-                  To become the world's most trusted payment infrastructure
+                  To become the world's most trusted software infrastructure
                   provider, enabling frictionless commerce across borders and
                   creating opportunities for businesses to thrive in the digital
                   economy.
@@ -244,8 +244,7 @@ export default function AboutPage() {
                 Join Us on Our Journey
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Partner with Ethos Solutions and be part of the future of
-                payments.
+                Partner with Ethos Solutions and be part of the future.
               </p>
               <a
                 href="/contact"
