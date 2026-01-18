@@ -37,10 +37,10 @@ const whyEthosFeatures = [
   {
     title: "Lower total cost of tech stack payments",
     description:
-      "We benchmark your effective rates, then engineer a lower-cost structure using true interchange+, routing optimization, and program-level incentives.",
+      "We benchmark your effective rates, then engineer a lower-cost structure using true interchange++, routing optimization, and program-level incentives.",
     features: [
       "Statement and fee audit within 24-48 hours",
-      "Interchange+ with transparent margin",
+      "Interchange++ with transparent margin",
       "Enterprise ACH and large-ticket optimization",
       "International compliance through Adyen in 170+ countries including India, China, Mexico, Brazil, Indonesia, Australia, and all of Europe",
     ],
@@ -216,7 +216,7 @@ export default function Home() {
                 <div className="text-center">
                   <CheckCircle className="h-5 w-5 text-green-400 mx-auto mb-2" />
                   <p className="text-xs text-gray-300">
-                    Interchange+ optimization
+                    Interchange++ optimization
                   </p>
                 </div>
                 <div className="text-center">
@@ -375,7 +375,7 @@ export default function Home() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
                 <Link
-                  href="/contact"
+                  href="/payments-audit"
                   className="rounded-md bg-white px-8 py-4 text-lg font-semibold text-primary shadow-lg hover:bg-gray-50 transition-colors inline-flex items-center justify-center gap-2"
                 >
                   Request a payment audit

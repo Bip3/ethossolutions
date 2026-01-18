@@ -23,11 +23,11 @@ const valueProps = [
   {
     title: "Lower total cost of tech stack payments",
     description:
-      "We benchmark your effective rates, then engineer a lower-cost structure using true interchange+, routing optimization, and program-level incentives.",
+      "We benchmark your effective rates, then engineer a lower-cost structure using true interchange++, routing optimization, and program-level incentives.",
     icon: DollarSign,
     features: [
       "Statement and fee audit within 24-48 hours",
-      "Interchange+ with transparent margin",
+      "Interchange++ with transparent margin",
       "Enterprise ACH and large-ticket optimization",
       "International compliance through Adyen in 170+ countries including India, China, Mexico, Brazil, Indonesia, Australia, and all of Europe",
     ],
@@ -91,6 +91,11 @@ const differentiators = [
       "Most solutions compete on teaser rates. Ethos optimizes your entire payment stack—pricing, routing, authorization, risk, SaaS integration and reconciliations—so finance and operations leaders can unlock real EBITDA gains.",
   },
   {
+    title: "Omni-channel global payments",
+    description:
+      "Omni Channel global payments on one stack allows customers to seamlessly engage with our clients' product or service without risk of international or sales channel <strong>data siloing</strong>.",
+  },
+  {
     title: "Dedicated implementation team",
     description:
       "Acquire a dedicated tech team for free. We provide a software strategy and implementation team by your side throughout your journey.",
@@ -103,7 +108,7 @@ const differentiators = [
   {
     title: "Transparent economics",
     description:
-      "No mystery fees or downgrade categories. We provide statement-level reporting with clear interchange+ pricing and visible margins.",
+      "No mystery fees or downgrade categories. We provide statement-level reporting with clear interchange++ pricing and visible margins.",
   },
 ];
 
@@ -276,7 +281,7 @@ export default function WhyEthos() {
                 payment stack for real EBITDA gains.
               </p>
               <Link
-                href="/contact"
+                href="/payments-audit"
                 className="inline-flex items-center gap-2 rounded-md bg-white px-8 py-4 text-lg font-semibold text-primary shadow-lg hover:bg-gray-50 transition-colors"
               >
                 Request a payment audit

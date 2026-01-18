@@ -7,12 +7,12 @@ import { CheckCircle, ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "Pricing - Transparent Enterprise Payment Solutions",
   description:
-    "Transparent, enterprise-ready pricing models. Interchange+ transparency with clear margin disclosure.",
+    "Transparent, enterprise-ready pricing models. Interchange++ transparency with clear margin disclosure.",
 };
 
 const pricingTiers = [
   {
-    name: "Interchange+ Core",
+    name: "Interchange++ Core",
     targetVolume: "For $10M-$50M annual volume",
     pricing: "IC + basis points",
     description:
@@ -31,7 +31,7 @@ const pricingTiers = [
     targetVolume: "For $50M-$250M annual volume",
     pricing: "Custom blended model",
     description:
-      "Combines interchange+ with negotiated enterprise schedules.",
+      "Combines interchange++ with negotiated enterprise schedules.",
     features: [
       "Dedicated account & success team",
       "Quarterly optimization & fee reviews",
@@ -72,7 +72,7 @@ export default function Pricing() {
               </h1>
               <p className="text-lg leading-8 text-gray-100">
                 Ethos structures pricing to align with your payment mix, risk
-                profile, and growth plans—always with interchange+ transparency
+                profile, and growth plans—always with interchange++ transparency
                 and clear margin disclosure.
               </p>
             </div>
@@ -86,7 +86,7 @@ export default function Pricing() {
               {pricingTiers.map((tier, index) => (
                 <div
                   key={index}
-                  className={`relative rounded-2xl p-8 ${
+                  className={`relative rounded-2xl p-8 flex flex-col ${
                     tier.highlighted
                       ? "bg-white border-2 border-primary shadow-2xl ring-2 ring-primary/20"
                       : "bg-white border border-gray-200 shadow-lg"
@@ -111,7 +111,7 @@ export default function Pricing() {
                     </p>
                     <p className="text-sm text-gray-600">{tier.description}</p>
                   </div>
-                  <ul className="space-y-4 mb-8">
+                  <ul className="space-y-4 mb-8 flex-grow">
                     {tier.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-3">
                         <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
@@ -151,7 +151,7 @@ export default function Pricing() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                  Interchange+ Transparency
+                  Interchange++ Transparency
                 </h3>
                 <p className="text-gray-600">
                   See exactly what you pay for interchange, assessments, and our
@@ -224,7 +224,7 @@ export default function Pricing() {
                 volume and mix. No obligation, no sales pressure.
               </p>
               <Link
-                href="/contact"
+                href="/payments-audit"
                 className="inline-flex items-center gap-2 rounded-md bg-white px-8 py-4 text-lg font-semibold text-primary shadow-lg hover:bg-gray-50 transition-colors"
               >
                 Request a payment audit

@@ -68,6 +68,15 @@ const coreIndustries = [
 
 const dtcVerticals = [
   {
+    category: "MLM (Multi Level Marketing)",
+    industries: [
+      "Network marketing platforms",
+      "Direct sales organizations",
+      "Commission-based distribution",
+    ],
+    icon: Heart,
+  },
+  {
     category: "Consumer Packaged Goods (CPG) - Premium & Branded",
     industries: [
       "Beauty & skincare",
@@ -148,19 +157,10 @@ const dtcVerticals = [
     ],
     icon: Gem,
   },
-  {
-    category: "MLM (Multi Level Marketing)",
-    industries: [
-      "Network marketing platforms",
-      "Direct sales organizations",
-      "Commission-based distribution",
-    ],
-    icon: Heart,
-  },
 ];
 
 const features = [
-  "Interchange+ optimization for transparent pricing",
+  "Interchange++ optimization for transparent pricing",
   "Card & ACH routing for maximum cost savings",
   "Chargeback automation and dispute management",
   "Multi-region, redundant processing paths",
@@ -230,78 +230,6 @@ export default function Solutions() {
           </div>
         </section>
 
-        {/* DTC & E-commerce Verticals */}
-        <section className="py-24 bg-gray-50">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-6">
-                DTC & E-commerce verticals
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Specialized payment solutions for direct-to-consumer brands
-                across multiple categories.
-              </p>
-            </div>
-
-            <div className="space-y-8">
-              {dtcVerticals.map((vertical, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-2xl shadow-lg p-8 border border-gray-200"
-                >
-                  <div className="flex items-start gap-6 mb-6">
-                    <div className="flex-shrink-0">
-                      <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary">
-                        <vertical.icon className="h-7 w-7 text-white" />
-                      </div>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                        {vertical.category}
-                      </h3>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                        {vertical.industries.map((industry, idx) => (
-                          <div
-                            key={idx}
-                            className="flex items-start gap-2 text-gray-700"
-                          >
-                            <CheckCircle className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
-                            <span className="text-sm">{industry}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-24 bg-white">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-6">
-                Features for every industry
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Regardless of your vertical, you get access to enterprise-grade
-                payment infrastructure.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
-              {features.map((feature, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">{feature}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Partners Section */}
         <section className="py-24 bg-gray-50">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -357,6 +285,78 @@ export default function Solutions() {
                   className="h-full w-auto object-contain"
                 />
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* DTC & E-commerce Verticals */}
+        <section className="py-24 bg-white">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-6">
+                DTC & E-commerce verticals
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Specialized payment solutions for direct-to-consumer brands
+                across multiple categories.
+              </p>
+            </div>
+
+            <div className="space-y-8">
+              {dtcVerticals.map((vertical, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-2xl shadow-lg p-8 border border-gray-200"
+                >
+                  <div className="flex items-start gap-6 mb-6">
+                    <div className="flex-shrink-0">
+                      <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary">
+                        <vertical.icon className="h-7 w-7 text-white" />
+                      </div>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                        {vertical.category}
+                      </h3>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                        {vertical.industries.map((industry, idx) => (
+                          <div
+                            key={idx}
+                            className="flex items-start gap-2 text-gray-700"
+                          >
+                            <CheckCircle className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
+                            <span className="text-sm">{industry}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-24 bg-gray-50">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-6">
+                Features for every industry
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Regardless of your vertical, you get access to enterprise-grade
+                payment infrastructure.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+              {features.map((feature, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">{feature}</span>
+                </div>
+              ))}
             </div>
           </div>
         </section>

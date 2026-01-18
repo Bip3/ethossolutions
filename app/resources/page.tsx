@@ -240,7 +240,7 @@ export default function Resources() {
                 Get a free payment audit and see exactly how much you could save.
               </p>
               <Link
-                href="/contact"
+                href="/payments-audit"
                 className="inline-flex items-center gap-2 rounded-md bg-white px-8 py-4 text-lg font-semibold text-primary shadow-lg hover:bg-gray-50 transition-colors"
               >
                 Request a payment audit
