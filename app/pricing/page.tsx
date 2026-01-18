@@ -231,7 +231,7 @@ export default function Pricing() {
                 <ArrowRight className="h-5 w-5" />
               </Link>
               <p className="text-sm text-gray-200 mt-6">
-                We'll sign your NDA or provide ours.
+                We'll sign your NDA or we can you provide ours.
               </p>
             </div>
           </div>
