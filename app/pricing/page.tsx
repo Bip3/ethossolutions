@@ -204,8 +204,8 @@ export default function Pricing() {
                   CFO-Ready Reporting
                 </h3>
                 <p className="text-gray-600">
-                  Detailed transaction reporting, reconciliation tools, and
-                  analytics dashboards for finance teams.
+                  Unified global platform transaction reporting, reconciliation tools, and
+                  analytics dashboards for finance teams on one dashboard.
                 </p>
               </div>
             </div>
@@ -231,7 +231,7 @@ export default function Pricing() {
                 <ArrowRight className="h-5 w-5" />
               </Link>
               <p className="text-sm text-gray-200 mt-6">
-                We'll sign your NDA or provide ours.
+                We'll sign your NDA or we can you provide ours.
               </p>
             </div>
           </div>
