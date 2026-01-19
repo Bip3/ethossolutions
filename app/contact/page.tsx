@@ -6,7 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle, Paperclip } from "lucide-react";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -19,6 +19,17 @@ const contactSchema = z.object({
 
 type ContactFormData = z.infer<typeof contactSchema>;
 
+// File types handled separately since they're not directly in the form data
+const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
+const ACCEPTED_FILE_TYPES = [
+  "application/pdf",
+  "application/vnd.ms-excel",
+  "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  "image/jpeg",
+  "image/png",
+  "text/csv",
+];
+
 const contactInfo = [
   {
     icon: Mail,
@@ -29,19 +40,21 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+1 (234) 567-890",
+    value: "+1 (949) 375-5861",
     link: "tel:+1234567890",
   },
   {
     icon: MapPin,
     label: "Address",
-    value: "123 Business Ave, Suite 100, City, ST 12345",
+    value: "3 Corporate Plaze, Suite 260, Newport Beach, CA 92660",
     link: null,
   },
 ];
 
 export default function ContactPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [attachedFiles, setAttachedFiles] = useState<File[]>([]);
+  const [fileError, setFileError] = useState<string>("");
   const {
     register,
     handleSubmit,
@@ -51,12 +64,44 @@ export default function ContactPage() {
     resolver: zodResolver(contactSchema),
   });
 
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = Array.from(e.target.files || []);
+    setFileError("");
+
+    // Validate file size and type
+    const validFiles: File[] = [];
+    for (const file of files) {
+      if (file.size > MAX_FILE_SIZE) {
+        setFileError(`File "${file.name}" exceeds 10MB limit`);
+        return;
+      }
+      if (!ACCEPTED_FILE_TYPES.includes(file.type)) {
+        setFileError(`File "${file.name}" is not an accepted format`);
+        return;
+      }
+      validFiles.push(file);
+    }
+
+    setAttachedFiles((prev) => [...prev, ...validFiles]);
+  };
+
+  const removeFile = (index: number) => {
+    setAttachedFiles((prev) => prev.filter((_, i) => i !== index));
+  };
+
   const onSubmit = async (data: ContactFormData) => {
     // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1500));
     console.log("Form data:", data);
+    console.log("Attached files:", attachedFiles);
+
+    // Here you would typically upload files to a server or email service
+    // For now, we're just logging them
+
     setIsSubmitted(true);
     reset();
+    setAttachedFiles([]);
+    setFileError("");
 
     // Reset success message after 5 seconds
     setTimeout(() => setIsSubmitted(false), 5000);
@@ -273,6 +318,70 @@ export default function ContactPage() {
                         <p className="mt-1 text-sm text-red-600">
                           {errors.message.message}
                         </p>
+                      )}
+                    </div>
+
+                    {/* File Attachment Section */}
+                    <div>
+                      <label
+                        htmlFor="attachments"
+                        className="block text-sm font-medium text-gray-900 mb-2"
+                      >
+                        Attachments (Optional)
+                      </label>
+                      <p className="text-sm text-gray-600 mb-3">
+                        For payment audits, you can attach relevant statements such as processor end of month statements, gateway statements, token library statements, ISO statements, or other cost component documents. Accepted formats: PDF, Excel, CSV, or images (max 10MB per file).
+                      </p>
+
+                      <div className="flex items-center gap-4">
+                        <label
+                          htmlFor="attachments"
+                          className="cursor-pointer inline-flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 transition-colors"
+                        >
+                          <Paperclip className="h-4 w-4" />
+                          Choose Files
+                        </label>
+                        <input
+                          type="file"
+                          id="attachments"
+                          multiple
+                          accept=".pdf,.xls,.xlsx,.csv,.jpg,.jpeg,.png"
+                          onChange={handleFileChange}
+                          className="hidden"
+                        />
+                      </div>
+
+                      {fileError && (
+                        <p className="mt-2 text-sm text-red-600">{fileError}</p>
+                      )}
+
+                      {/* Display attached files */}
+                      {attachedFiles.length > 0 && (
+                        <div className="mt-4 space-y-2">
+                          {attachedFiles.map((file, index) => (
+                            <div
+                              key={index}
+                              className="flex items-center justify-between p-3 bg-gray-50 rounded-lg border border-gray-200"
+                            >
+                              <div className="flex items-center gap-2">
+                                <Paperclip className="h-4 w-4 text-gray-500" />
+                                <span className="text-sm text-gray-700">
+                                  {file.name}
+                                </span>
+                                <span className="text-xs text-gray-500">
+                                  ({(file.size / 1024).toFixed(1)} KB)
+                                </span>
+                              </div>
+                              <button
+                                type="button"
+                                onClick={() => removeFile(index)}
+                                className="text-red-600 hover:text-red-700 text-sm font-medium"
+                              >
+                                Remove
+                              </button>
+                            </div>
+                          ))}
+                        </div>
                       )}
                     </div>
 
