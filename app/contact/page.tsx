@@ -329,9 +329,17 @@ export default function ContactPage() {
                       >
                         Attachments (Optional)
                       </label>
-                      <p className="text-sm text-gray-600 mb-3">
-                        For payment audits, you can attach relevant statements such as processor end of month statements, gateway statements, token library statements, ISO statements, or other cost component documents. Accepted formats: PDF, Excel, CSV, or images (max 10MB per file).
-                      </p>
+                      <div className="text-sm text-gray-600 mb-3">
+                        <p className="mb-2">We need any of the following information:</p>
+                        <ul className="list-disc ml-6 space-y-1">
+                          <li>Processor end of month statement</li>
+                          <li>Gateway statement</li>
+                          <li>Token library statement</li>
+                          <li>ISO statement</li>
+                          <li>Or other cost components with org</li>
+                        </ul>
+                        <p className="mt-2">Accepted formats: PDF, Excel, CSV, or images (max 10MB per file).</p>
+                      </div>
 
                       <div className="flex items-center gap-4">
                         <label
