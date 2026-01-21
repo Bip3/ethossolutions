@@ -42,7 +42,7 @@ const whyEthosFeatures = [
       "Statement and fee audit within 24-48 hours",
       "Interchange++ with transparent margin",
       "Enterprise ACH and large-ticket optimization",
-      "International compliance through Adyen in 170+ countries including India, China, Mexico, Brazil, Indonesia, Australia, and all of Europe",
+      "International acceptance through Adyen in 170+ countries including India, China, Mexico, Brazil, Indonesia, Australia, and all of Europe",
     ],
     icon: DollarSign,
   },
@@ -71,12 +71,11 @@ const whyEthosFeatures = [
 ];
 
 const industries = [
-  "Enterprise e-commerce",
+  "E-commerce",
   "Wholesale & distribution",
   "Logistics & freight",
   "Construction suppliers",
   "Hospitality groups",
-  "B2B SaaS & platforms",
 ];
 
 const outcomes = [
@@ -93,10 +92,6 @@ const outcomes = [
     vertical: "Construction supplier",
     result:
       "Large-ticket optimization for $5k-$25k invoices using card + ACH blend.",
-  },
-  {
-    vertical: "B2B SaaS platform",
-    result: "Integrated recurring billing, dunning, and card updater tools.",
   },
 ];
 
@@ -123,11 +118,11 @@ export default function Home() {
           <div className="mx-auto max-w-7xl px-6 py-20 sm:py-28 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
               <h1 className="text-5xl font-bold tracking-tight sm:text-7xl mb-6 leading-tight">
-                Enterprise Integrated Software
+                Midmarket Integrated Software
               </h1>
               <p className="text-xl leading-8 text-gray-100 mb-4">
-                Integrated Enterprise Software and Payments built for U.S.
-                businesses with $10M+ in annual revenue.
+                Integrated software and payments built for U.S. businesses with
+                $10M+ in annual revenue.
               </p>
               <p className="text-lg leading-8 text-gray-200 mb-10">
                 Ethos Solutions helps mid-market and enterprise teams lower

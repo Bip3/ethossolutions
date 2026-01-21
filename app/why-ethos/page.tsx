@@ -29,7 +29,7 @@ const valueProps = [
       "Statement and fee audit within 24-48 hours",
       "Interchange++ with transparent margin",
       "Enterprise ACH and large-ticket optimization",
-      "International compliance through Adyen in 170+ countries including India, China, Mexico, Brazil, Indonesia, Australia, and all of Europe",
+      "International acceptance through Adyen in 170+ countries including India, China, Mexico, Brazil, Indonesia, Australia, and all of Europe",
     ],
     color: "from-green-500 to-emerald-600",
   },
@@ -277,14 +277,14 @@ export default function WhyEthos() {
                 Experience the Ethos difference
               </h2>
               <p className="text-lg leading-8 text-gray-100 mb-10">
-                Get a free payment audit and see exactly how we can optimize your
-                payment stack for real EBITDA gains.
+                Ready to optimize your payment stack for real EBITDA gains?
+                Let's discuss how we can help your business.
               </p>
               <Link
-                href="/payments-audit"
+                href="/contact"
                 className="inline-flex items-center gap-2 rounded-md bg-white px-8 py-4 text-lg font-semibold text-primary shadow-lg hover:bg-gray-50 transition-colors"
               >
-                Request a payment audit
+                Schedule a call
                 <ArrowRight className="h-5 w-5" />
               </Link>
               <p className="text-sm text-gray-200 mt-6">

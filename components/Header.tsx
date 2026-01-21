@@ -10,6 +10,7 @@ const navigation = [
   { name: "Pricing", href: "/pricing" },
   { name: "Compliance", href: "/compliance" },
   { name: "Resources", href: "/resources" },
+  { name: "Sign in", href: "/signin" },
 ];
 
 export default function Header() {
@@ -59,16 +60,10 @@ export default function Header() {
         {/* CTA Buttons */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4">
           <Link
-            href="/signin"
-            className="text-sm font-semibold leading-6 text-gray-900 hover:text-primary transition-colors"
-          >
-            Sign in
-          </Link>
-          <Link
             href="/contact"
             className="rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-dark transition-colors"
           >
-            Book a payment audit
+            Contact us
           </Link>
         </div>
       </nav>
@@ -88,18 +83,11 @@ export default function Header() {
               </Link>
             ))}
             <Link
-              href="/signin"
-              className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Sign in
-            </Link>
-            <Link
               href="/contact"
               className="block rounded-md bg-primary px-3 py-2.5 text-center text-base font-semibold text-white shadow-sm hover:bg-primary-dark mt-4"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Book a payment audit
+              Contact us
             </Link>
           </div>
         </div>

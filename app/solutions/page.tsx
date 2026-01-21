@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 
 const coreIndustries = [
   {
-    name: "Enterprise E-commerce",
+    name: "E-commerce",
     description:
       "High-volume payment processing with advanced fraud protection and authorization optimization.",
     icon: ShoppingBag,
@@ -37,7 +37,7 @@ const coreIndustries = [
   {
     name: "Wholesale & Distribution",
     description:
-      "Large-ticket B2B payments with ACH optimization and net terms integration.",
+      "Large-ticket payments with ACH optimization and net terms integration.",
     icon: Package,
   },
   {
@@ -57,12 +57,6 @@ const coreIndustries = [
     description:
       "Unified settlement and chargeback automation across multiple properties.",
     icon: Hotel,
-  },
-  {
-    name: "B2B SaaS & Platforms",
-    description:
-      "Recurring billing, dunning, card updater tools, and subscription management.",
-    icon: Laptop,
   },
 ];
 
@@ -345,8 +339,8 @@ export default function Solutions() {
                 Features for every industry
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Regardless of your vertical, you get access to enterprise-grade
-                payment infrastructure.
+                Regardless of your vertical, you get access to world-class payment
+                infrastructure.
               </p>
             </div>
 
