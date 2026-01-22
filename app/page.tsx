@@ -16,6 +16,9 @@ import {
   Users,
   DollarSign,
   Clock,
+  Package,
+  Receipt,
+  PieChart,
 } from "lucide-react";
 
 const stats = [
@@ -236,6 +239,117 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Supply Chain & Procurement Excellence */}
+        <section className="py-24 bg-gradient-to-br from-blue-50 to-gray-50">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-base font-semibold leading-7 text-accent mb-2">
+                Beyond Payments
+              </h2>
+              <p className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-6">
+                Integrated supply chain & procurement solutions
+              </p>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Ethos goes beyond payment processing to deliver comprehensive
+                supply chain software that streamlines procurement, enhances
+                vendor relationships, and provides deep financial visibility.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Procurement & Vendor Management */}
+              <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-accent mb-6">
+                  <FileCheck className="h-7 w-7 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  Procurement & Vendor Management
+                </h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700">
+                      Purchase order (PO) workflows
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700">
+                      Supplier onboarding + KYC
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700">
+                      Dynamic pricing / contract compliance
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Supply Chain Financing */}
+              <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary mb-6">
+                  <Receipt className="h-7 w-7 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  Supply Chain Financing
+                </h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700">
+                      Flexible payment terms and early payment discounts
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700">
+                      Working capital optimization for buyers and suppliers
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700">
+                      Integrated financing options across your supply chain
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Analytics & Visibility */}
+              <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-secondary mb-6">
+                  <PieChart className="h-7 w-7 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  Analytics & Visibility
+                </h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700">
+                      Spend analytics by supplier/category
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700">
+                      Inventory cost visibility
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700">
+                      Real-time dashboards for procurement and finance teams
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Why Ethos Section */}
         <section className="py-24 bg-gray-50">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -356,33 +470,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="bg-gradient-to-r from-primary to-primary-dark py-20">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl mb-6">
-                See how much you could save on payments in 5 business days
-              </h2>
-              <p className="text-lg leading-8 text-gray-100 mb-10">
-                Share three recent statements and we'll return a modeled savings
-                report, recommended routing changes, and a compliance review
-                tailored to your business.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-                <Link
-                  href="/payments-audit"
-                  className="rounded-md bg-white px-8 py-4 text-lg font-semibold text-primary shadow-lg hover:bg-gray-50 transition-colors inline-flex items-center justify-center gap-2"
-                >
-                  Request a payment audit
-                  <ArrowRight className="h-5 w-5" />
-                </Link>
-              </div>
-              <p className="text-sm text-gray-200">
-                No obligation. We'll sign your NDA or provide ours.
-              </p>
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />
